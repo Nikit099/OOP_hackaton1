@@ -18,7 +18,9 @@ export class ContextMenu extends Menu {
     this.el.classList.remove('open')
   }
 
-  add() {
-    this.el.append(newElement)
+  add(element) {
+    const newEl = document.createElement('li')
+    newEl.innerHTML = element
+    this.el.append(newEl)
   }
 }
