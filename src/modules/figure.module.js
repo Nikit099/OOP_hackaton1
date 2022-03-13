@@ -13,13 +13,15 @@ export class FigureModule extends Module {
             lastFigure.remove()
         }
         const figure = document.createElement('div')
+        let width = random(50, 400)
+        let height = random(50, 300)
         figure.className = 'figure'
         figure.style.position = 'absolute'
-        figure.style.width = random(50, 400) + 'px'
-        figure.style.height = random(50, 300) + 'px'
+        figure.style.width = width + 'px'
+        figure.style.height = height + 'px'
 
-        figure.style.left = `${random(1, document.body.clientWidth - 400)}px`
-        figure.style.top = `${random(1, document.body.clientHeight - 300)}px`
+        figure.style.left = `${random(1, document.body.clientWidth - width)}px`
+        figure.style.top = `${random(1, document.body.clientHeight - height)}px`
 
         figure.style.borderRadius = `20px`
         figure.style.background = randomColor()
@@ -31,8 +33,6 @@ export class FigureModule extends Module {
     toHTML() {
         return `<li class="menu-item" data-type="${this.type}">${this.text}</li>`
     }
-
-
 
 
 

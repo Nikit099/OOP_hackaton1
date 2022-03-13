@@ -9,3 +9,10 @@ export function randomColor() {
     }
     return color
 }
+
+export function main () {
+    const newArr = ['HTML', 'CSS', 'JavaScript', 'React', 'NodeJS']
+    const randomValue = Math.floor(Math.random() * newArr.length)
+    const result = newArr[randomValue]
+    return result
+  }
