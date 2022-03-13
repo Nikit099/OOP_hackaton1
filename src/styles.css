@@ -48,3 +48,13 @@ body {
 .timer-block {
     font-size: 40px;
 }
+
+.custom-element {
+    display: inline-block;
+    cursor: pointer;
+    background: #6A85E3;
+    color: #fff;
+    padding: 18px 30px 18px 30px;
+    border-radius: 20px;
+    font-weight: 700
+}

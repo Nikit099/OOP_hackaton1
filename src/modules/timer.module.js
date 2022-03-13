@@ -33,7 +33,6 @@ export class TimerModule extends Module {
       if (this.countdownTime < -1) {
         clearInterval(timer)
         alert('Время вышло!')
-        document.body.style.background = '#fff'
         this.timerContainer.remove()
       }
     }, 1000)
@@ -42,7 +41,6 @@ export class TimerModule extends Module {
   trigger() {
     this.countdownTime = +prompt('Введите количество секунд!')
     if (this.countdownTime) {
-      document.body.style.background = '#8CA7BC'
       this.createTimer()
     }
   }
