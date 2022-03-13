@@ -1,6 +1,12 @@
 import './styles.css'
-import { Menu } from './core/menu' // добавил я
+import { ContextMenu } from './menu'
+import { BackgroundModule } from './modules/background.module'
+import { FigureModule } from './modules/figure.module'
+const modulBackgroundColor = new BackgroundModule('setBackgroundColor', 'Поменять цвет экрана')
+const modulCreateFigure = new FigureModule('createFigure', 'Создать фигуру')
+const menu = new ContextMenu('.menu')
 
-const menu = new Menu('.menu') // добавил я
-
-document.body.addEventListener('click', e => menu.open(e))
+menu.open()
+menu.add(modulBackgroundColor.toHTML())
+menu.add(modulCreateFigure.toHTML())
+menu.clickModulOnMenu(modulBackgroundColor, modulCreateFigure)
