@@ -1,4 +1,5 @@
 import { Module } from '../core/module'
+import { main } from '../utils'
 
 export class CustomModule extends Module {
   constructor(type, text) {
@@ -8,7 +9,7 @@ export class CustomModule extends Module {
 
   trigger() {
     this.customElement.className = 'custom-element'
-    this.customElement.textContent = 'Custom Message!'
+    this.customElement.textContent = main()
     document.body.append(this.customElement)
 
     setTimeout(() => {

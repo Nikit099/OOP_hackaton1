@@ -21,7 +21,7 @@ export class ClicksModule extends Module {
       this.decreaseTime()
     }, 1000)
 
-    window.addEventListener('click', () => { 
+    document.body.addEventListener('click', () => { 
       if (this.time !== 0) {
         this.scoreClicks++   
       }

@@ -29,12 +29,12 @@ export class ContextMenu extends Menu {
       const {target} = event
       const menuItem = target.closest('.menu-item')
 
-      if (menuItem.dataset.type === 'setBackgroundColor') {
+      if (menuItem.dataset.type === 'background') {
         modulBackgroundColor.trigger()
         this.close()
       }
 
-      if (menuItem.dataset.type === 'createFigure') {
+      if (menuItem.dataset.type === 'figure') {
         modulCreateFigure.trigger()
         this.close()
       }
