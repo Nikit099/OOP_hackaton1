@@ -24,7 +24,7 @@ export class ContextMenu extends Menu {
     this.el.innerHTML += newEl
   }
 
-  clickModulOnMenu(modulBackgroundColor, modulCreateFigure) {
+  clickModulOnMenu(modulBackgroundColor, modulCreateFigure, modulTimer) {
     this.el.addEventListener('click', (event) => {
       const {target} = event
       const menuItem = target.closest('.menu-item')
@@ -36,6 +36,11 @@ export class ContextMenu extends Menu {
 
       if (menuItem.dataset.type === 'createFigure') {
         modulCreateFigure.trigger()
+        this.close()
+      }
+
+      if (menuItem.dataset.type === 'timer') {
+        modulTimer.trigger()
         this.close()
       }
     })
