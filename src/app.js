@@ -4,7 +4,7 @@ import { BackgroundModule } from './modules/background.module'
 import { FigureModule } from './modules/figure.module'
 import { TimerModule } from './modules/timer.module'
 
-const modulBackgroundColor = new BackgroundModule('setBackgroundColor', 'Изменить фон страници')
+const modulBackgroundColor = new BackgroundModule('setBackgroundColor', 'Изменить фон страницы')
 const modulCreateFigure = new FigureModule('createFigure', 'Создать фигуру')
 const modulTimer = new TimerModule('timer', 'Запустить таймер')
 const menu = new ContextMenu('.menu')
